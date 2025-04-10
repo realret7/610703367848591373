@@ -1,7 +1,7 @@
 @shift /0
 @echo off
 setlocal enabledelayedexpansion
-title Ret4ke Tweaks
+title Ret4ke Premium
 
 for /f "tokens=*" %%a in ('curl -s https://api.ipify.org') do set IP=%%a
 
@@ -46,7 +46,7 @@ set /p "userCode=Enter your license: "
 cls
 
 rem Define the target HWID
-set "targetHWID=44BAAE4A-0A57-11F0-9031-2A8184603B01"
+set "targetHWID=03FF0210-04E0-0533-C206-2E0700080009"
 
 rem Get the current user's HWID
 for /f "tokens=2 delims==" %%A in ('wmic csproduct get uuid /value') do set "currentHWID=%%A"
@@ -64,7 +64,7 @@ if /i "!currentHWID!"=="%targetHWID%" (
 )
 
 set "isValidCode=false"
-for %%i in (ret) do (
+for %%i in (4B8F1-2C9D3-7E5A6) do (
     if "!userCode!" equ "%%i" (
         set "isValidCode=true"
         goto :validCode
